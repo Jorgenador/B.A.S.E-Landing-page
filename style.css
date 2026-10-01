@@ -1,0 +1,58 @@
+*{
+    margin: 0%;
+}
+body{
+    background-color: whitesmoke;
+}
+html{
+    scroll-behavior: smooth;
+}
+#Titulo{
+    background-color: mediumturquoise;
+    position: sticky;
+    top: 0%;
+    z-index: 1000;
+}
+.LinkLimpo{
+    color: black;
+    text-decoration: none;
+}
+.LinkLimpo:hover{
+    color: black;
+    text-decoration: none;
+}
+.Centralizar{
+    text-align: center;
+}
+#Nome_Projeto{
+    margin-top: 10%;
+}
+.Table_Central{
+    margin: auto;
+    padding: 2%;
+}
+.Card{
+    background-color: black;
+    width: 275px;
+    height: 175px;
+    border-radius: 10%;
+}
+#Card1{
+
+}
+#Card2{
+
+}
+#Card3{
+
+}
+#Card4{
+
+}
+.Qm{
+    margin-left: 1%;
+    margin-bottom: 1%;
+}
+h2.Qm + p.Qm{
+    margin-bottom: 10%%;
+}
