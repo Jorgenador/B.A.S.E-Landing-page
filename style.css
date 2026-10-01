@@ -14,18 +14,16 @@ html{
     z-index: 1000;
 }
 .LinkLimpo{
-    color: black;
     text-decoration: none;
 }
 .LinkLimpo:hover{
-    color: black;
     text-decoration: none;
 }
 .Centralizar{
     text-align: center;
 }
 #Nome_Projeto{
-    margin-top: 10%;
+    margin-top: 2%;
 }
 .Table_Central{
     margin: auto;
@@ -54,5 +52,16 @@ html{
     margin-bottom: 1%;
 }
 h2.Qm + p.Qm{
-    margin-bottom: 10%%;
+    margin-bottom: 10%;
+}
+img{
+    display: block;
+    margin: auto;
+    margin-top: 2%;
+}
+#Ponto{
+    color: blue;
+}
+.SE{
+    color: orangered;
 }
