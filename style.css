@@ -14,6 +14,32 @@ header{
     position: sticky;
     top: 0%;
     z-index: 1000;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.671);
+}
+.headerDiv{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 90%;
+    margin: 10 auto;
+    padding: 10px 20px;
+}
+.menuNav a{
+    margin-right: auto;
+    margin-left: auto;
+    text-decoration: none;
+    color: gray;
+    font-weight: bold;
+    font-size: 15px;
+    transition: color 0.2s ease;
+    padding: 5px;
+}
+.menuNav{
+    margin-right: auto;
+    margin-left: auto;
+}
+.menuNav a:hover{
+    color: rgb(20, 20, 150);
 }
 .LinkLimpo{
     text-decoration: none;
@@ -26,6 +52,17 @@ header{
 }
 #Nome_Projeto{
     margin-top: 2%;
+    font-size: 45px;
+}
+#Nome_Projeto span{
+    color: rgb(45, 45, 245);
+}
+#desc{
+    color: gray;
+    margin-left: auto;
+    max-width: 50%;
+    margin-right: auto;
+    margin-top: 1.5%;
 }
 em{
     font-weight: bold;
@@ -96,20 +133,29 @@ h2.Qm + p.Qm{
     margin-bottom: 2%;
 }
 #App{
-    display: block;
+    width: 50%;
     margin-top: 1%;
-    margin-left: 2%;
 }
 .AppTexto{
     display: flex;
     align-items: center;
-    padding: 5px;
+    justify-content: center;
 
+    gap: .5%;
     max-width: 100%;
-    margin-left: 25%;
     margin-bottom: 2%;
 }
-
+#DivImg{
+    max-width: 35%;
+}
+#ConhecerMais{
+    background-color: rgb(45, 45, 245);
+    width: 35%;
+    height: 35px;
+    border-radius: 5px;
+    margin: 10px auto 0 auto;
+    text-align: center;
+}
 #Impacto {
     p {color: #64748b; margin: 0; font-size: 20px;}
     h1 {font-size: 50px; margin: 0; }
@@ -134,4 +180,53 @@ h2.Qm + p.Qm{
     padding: 27px 20px; 
     border: 1px solid rgba(255, 255, 255, .04);; 
     border-radius: 16px; 
+}
+/* ------------------Recursos------------------ */
+#recursos {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    background-color: rgba(247, 249, 252);
+    padding: 30px;
+}
+
+.recursos {
+    display: flex;
+    gap: 3%;
+    margin: auto;
+    width: 50%;
+}
+
+.recursos_topico{
+    border: 1px solid rgb(233, 235, 238);
+    border-radius: 20px;
+    flex: 1;
+    text-align: left;
+    padding: 3%;
+    background-color: white;
+}
+
+#recursos ul{
+    list-style: none;
+}
+
+#recursos li{
+    color: gray;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+#recursos li::before{
+    content: "✓";
+    color: #18a67a;
+    font-weight: 900;
+    margin-right: 9px;
+}
+
+#recursos h2{
+    font-size: 36px;
+}
+
+#recursos p {
+    color: gray;
 }
