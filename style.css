@@ -52,16 +52,18 @@ html{
     margin-bottom: 1%;
 }
 h2.Qm + p.Qm{
-    margin-bottom: 10%;
+    margin-bottom: 2%;
 }
-img{
+#App{
     display: block;
     margin: auto;
-    margin-top: 2%;
-}
-#Ponto{
-    color: blue;
+    margin-top: 1%;
 }
 .SE{
     color: orangered;
+}
+#BASE{
+    display: inline-flex;
+    align-items: center;
+
 }
