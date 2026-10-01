@@ -67,3 +67,15 @@ h2.Qm + p.Qm{
     align-items: center;
 
 }
+.AppTexto{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    max-width: 50%;
+    margin-left: 25%;
+
+}
+.AppA{
+    flex: 1;
+}
