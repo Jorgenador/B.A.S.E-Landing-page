@@ -3,6 +3,8 @@
 }
 body{
     background-color: whitesmoke;
+    font-family: sans-serif;
+    font-size: 20px;
 }
 html{
     scroll-behavior: smooth;
@@ -25,16 +27,51 @@ html{
 #Nome_Projeto{
     margin-top: 2%;
 }
-.Table_Central{
-    margin: auto;
-    padding: 2%;
+em{
+    font-weight: bold;
 }
-.Card{
+#Dados {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    gap: 1%;      
+    margin: 2% auto;
+    width: 100%; 
+    max-width: 1200px;
+}
+.DadoCard {
+    width: 80%;
+    height: 175px; 
+    border-radius: 5%;
+    padding: 5%;
+}
+#Dados1{
+    background-color: orangered;
+}
+#Dados2{
+    background-color: turquoise;
+}
+#Dados3{
+    background-color: greenyellow;
+}
+#Dados4{
+    background-color: goldenrod;
+}
+#Cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    gap: 1%;      
+    margin: 2% auto;
+    width: 100%; 
+    max-width: 1200px;
+}
+.Card {
     background-color: black;
-    width: 275px;
-    height: 175px;
-    border-radius: 10%;
-}
+    width: 80%;
+    height: 175px; 
+    border-radius: 5%;
+}   
 #Card1{
 
 }
@@ -50,6 +87,7 @@ html{
 .Qm{
     margin-left: 1%;
     margin-bottom: 1%;
+    margin-right: 2%;
 }
 h2.Qm + p.Qm{
     margin-bottom: 2%;
