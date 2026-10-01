@@ -3,14 +3,14 @@
 }
 body{
     background-color: whitesmoke;
-    font-family: sans-serif;
-    font-size: 20px;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 14px;
 }
 html{
     scroll-behavior: smooth;
 }
-#Titulo{
-    background-color: mediumturquoise;
+header{
+    background-color: rgba(231, 231, 252, 0.671);
     position: sticky;
     top: 0%;
     z-index: 1000;
@@ -44,6 +44,9 @@ em{
     height: 175px; 
     border-radius: 5%;
     padding: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 #Dados1{
     background-color: orangered;
@@ -52,7 +55,7 @@ em{
     background-color: turquoise;
 }
 #Dados3{
-    background-color: greenyellow;
+    background-color: mediumseagreen;
 }
 #Dados4{
     background-color: goldenrod;
@@ -94,26 +97,17 @@ h2.Qm + p.Qm{
 }
 #App{
     display: block;
-    margin: auto;
     margin-top: 1%;
-}
-.SE{
-    color: orangered;
-}
-#BASE{
-    display: inline-flex;
-    align-items: center;
-
+    margin-left: 2%;
 }
 .AppTexto{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    padding: 5px;
 
-    max-width: 50%;
+    max-width: 100%;
     margin-left: 25%;
+    margin-bottom: 2%;
+}
 
-}
-.AppA{
-    flex: 1;
-}
+
