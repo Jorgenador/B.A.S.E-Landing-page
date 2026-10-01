@@ -156,11 +156,52 @@ h2.Qm + p.Qm{
     margin: 10px auto 0 auto;
     text-align: center;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+/* ------------------Recursos------------------ */
+#recursos {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    background-color: rgba(247, 249, 252);
+    padding: 30px;
 }
-#ConhecerMais p{
-    color: whitesmoke;
+
+.recursos {
+    display: flex;
+    gap: 3%;
+    margin: auto;
+    width: 50%;
+}
+
+.recursos_topico{
+    border: 1px solid rgb(233, 235, 238);
+    border-radius: 20px;
+    flex: 1;
+    text-align: left;
+    padding: 3%;
+    background-color: white;
+}
+
+#recursos ul{
+    list-style: none;
+}
+
+#recursos li{
+    color: gray;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+#recursos li::before{
+    content: "✓";
+    color: #18a67a;
+    font-weight: 900;
+    margin-right: 9px;
+}
+
+#recursos h2{
+    font-size: 36px;
+}
+
+#recursos p {
+    color: gray;
 }
