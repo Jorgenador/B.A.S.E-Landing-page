@@ -152,6 +152,11 @@ h2.Qm + p.Qm{
     margin-bottom: 2%;
     
 }
+
+#Solucao,#recursos,#Impacto{
+    scroll-margin-top: 80px;
+}
+
 #DivImg{
     max-width: 35%;
 }
