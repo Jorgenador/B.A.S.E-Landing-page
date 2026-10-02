@@ -10,14 +10,15 @@ html{
     scroll-behavior: smooth;
 }
 header{
-    background-color: rgba(231, 231, 252, .970);
+    background-color: rgba(231, 231, 252, .820);
     position: sticky;
     top: 0%;
     z-index: 1000;
     border-bottom: 1px solid rgba(128, 128, 128, 0.671);
+    backdrop-filter: blur(6px);
 }
 .headerDiv{
-    display: grid;
+    display: grid;;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
     max-width: 90%;
@@ -84,6 +85,11 @@ em{
     height: 175px;
     border-radius: 5%;
 
+    transition: .2s ease;
+}
+.Solucoes:hover{
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(20, 33, 61, .20);
 }
 .Contador{
     display: flex;
@@ -104,6 +110,7 @@ em{
 }
 #Solucao p{
     text-align: center;
+    color: gray;
 }
 .Solucoes h3{
     font-size: 16px;
@@ -193,6 +200,10 @@ h2.Qm + p.Qm{
 #Impacto .bloco p {
     font-size: 16px;
     line-height: 1.5;
+    color: #b8c2d4;
+}
+.inicioB p{
+    color: #b8c2d4;
 }
 /* ------------------Recursos------------------ */
 #recursos {
@@ -250,7 +261,68 @@ footer {
     align-items: center;
     padding: 20px;
     background-color: rgb(250, 250, 250);
+    margin-top: 2%;
 }
 .span1 { text-align: left; font-weight: bold; }
 .span2 { text-align: center; }
 .span3 { text-align: right; }
+
+/* ----------------------------- Equipe ----------------------------- */
+
+#EquipeContainer{
+    margin: auto;
+    background-color: whitesmoke;
+    width: 50%;
+    height: 400px;
+    perspective: 2500px;
+    cursor: pointer;
+}
+.Equipe{
+    position: relative;
+    margin: 2% auto;
+    width: 100%;
+    height: 100%;
+    border-radius: 1%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+#Frente,#Tras {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 0.5rem;
+}
+
+#Frente{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: whitesmoke;
+    font-weight: bold;
+    border: 2px solid #1f3153;
+    background-color: #14213D;
+}
+
+#Tras{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+    color: whitesmoke;
+    font-size: 22px;
+    font-weight: bold;
+    border: 2px solid #14213D;
+    background-color: #1f3153;
+    transform: rotateY(180deg);
+}
+#Tras span{
+    margin-left: 2%;
+}
+
+#EquipeContainer:hover .Equipe {
+  transform: rotateY(180deg);
+}
