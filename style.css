@@ -10,7 +10,7 @@ html{
     scroll-behavior: smooth;
 }
 header{
-    background-color: rgba(231, 231, 252, 0.671);
+    background-color: rgba(231, 231, 252, .970);
     position: sticky;
     top: 0%;
     z-index: 1000;
@@ -67,62 +67,56 @@ header{
 em{
     font-weight: bold;
 }
-#Dados {
+#solContainer{
+    margin: auto;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3,1fr);
     justify-items: center;
-    gap: 1%;      
-    margin: 2% auto;
-    width: 100%; 
-    max-width: 1200px;
-}
-.DadoCard {
-    width: 80%;
-    height: 175px; 
-    border-radius: 5%;
+    width: 100%;
+    max-width: 1000px;
+    gap: 2%;
     padding: 5%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
-#Dados1{
-    background-color: orangered;
-}
-#Dados2{
-    background-color: turquoise;
-}
-#Dados3{
-    background-color: mediumseagreen;
-}
-#Dados4{
-    background-color: goldenrod;
-}
-#Cards {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-items: center;
-    gap: 1%;      
-    margin: 2% auto;
-    width: 100%; 
-    max-width: 1200px;
-}
-.Card {
-    background-color: black;
-    width: 80%;
-    height: 175px; 
+.Solucoes{
+    background-color: ghostwhite;
+    position: relative;
+    margin-top: 2%;
+    border: 1px solid gray;
+    width: 100%;
+    height: 175px;
     border-radius: 5%;
-}   
-#Card1{
 
 }
-#Card2{
-
+.Contador{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    width: 32px;
+    height: 32px;
+    border-radius: 20%;
+    background-color: rgba(216, 234, 255, 0.89);
+    color: rgb(6, 9, 219);
+    font-weight: bold;
 }
-#Card3{
-
+#Solucao h2{
+    font-size: 36px;
 }
-#Card4{
-
+#Solucao p{
+    text-align: center;
+}
+.Solucoes h3{
+    font-size: 16;
+    margin-top: 10%;
+    margin-left: 20%;
+    font-weight: 700;
+}
+.Solucoes p{
+    margin: 6%;
+    font-size: 13.5;
+    line-height: 1.5;
 }
 .Qm{
     margin-left: 1%;
@@ -149,12 +143,18 @@ h2.Qm + p.Qm{
     max-width: 35%;
 }
 #ConhecerMais{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: rgb(45, 45, 245);
     width: 35%;
     height: 35px;
     border-radius: 5px;
     margin: 10px auto 0 auto;
     text-align: center;
+}
+#ConhecerMais a{
+    color: whitesmoke;
 }
 #Impacto {
     p {color: #64748b; margin: 0; font-size: 20px;}
@@ -167,8 +167,7 @@ h2.Qm + p.Qm{
 }
 
 .inicioB {
-    color: white
-
+    color: white;
 }
 
 .blocos {
