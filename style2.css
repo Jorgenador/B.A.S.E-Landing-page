@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(250, 250, 250);
+}
+
+p {
+    background-color: rgb(250, 250, 250);
+    text-align: center;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 28px 20px 10px;
+    line-height: 1.6;
+}
+
+header {
+    background-color: rgba(231, 231, 252, .970);
+    position: sticky;
+    top: 0;
+    
+    z-index: 1000;
+    border-bottom: 1px solid rgb(200, 200, 200);
+}
+
+.headerDiv{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 12px 0;
+    gap: 20px;
+}
+
+.headerDiv img {
+    display: block;
+    max-width: 125px;
+    height: auto;
+    margin-left: 80px;
+}
+
+.LinkLimpo {
+    text-decoration: none;
+}
+
+.menuNav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-left: auto;
+}
+
+.menuNav a {
+    text-decoration: none;
+    color: gray;
+    font-weight: bold;
+    font-size: 15px;
+    transition: color 0.2s ease;
+    padding: 10px 12px;
+    border-radius: 8px;
+}
+
+.menuNav a:hover {
+    color: rgb(20, 20, 150);
+    background-color: rgba(255,255,255,0.25);
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 20px;
+    background-color: rgb(250, 250, 250);
+    margin-top: auto;
+    flex-wrap: wrap;
+}
+
+footer div{
+    text-align: center;
+}
+
+.span1{
+    font-weight: bold;
+}
+
+iframe {
+    display: block;
+    margin: 20px auto;
+}
+
+.formulario-container {
+    width: 100%;
+}
+
+.formulario-container iframe {
+    display: block;
+    width: 100%;
+    height: 1800px;
+    border: 0;
+}

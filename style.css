@@ -301,6 +301,7 @@ footer {
     border-radius: 1%;
     transition: transform 1s;
     transform-style: preserve-3d;
+    box-shadow: 0 15px 35px rgba(20, 33, 61, .50);
 }
 
 #Frente,#Tras {
@@ -319,7 +320,7 @@ footer {
     color: whitesmoke;
     font-weight: bold;
     border: 2px solid #1f3153;
-    background: linear-gradient(135deg, #14213d 5%, rgb(13, 13, 187) 80%);
+    background: linear-gradient(135deg, rgb(8, 81, 141) 5%, #14213d 80%);
 }
 
 #Tras{
@@ -332,7 +333,7 @@ footer {
     font-size: 22px;
     font-weight: bold;
     border: 2px solid #14213D;
-    background: linear-gradient(135deg, #14213d 5%, rgb(8, 141, 52) 80%);
+    background: linear-gradient(135deg, #14213d 5%, rgb(8, 81, 141) 80%);
     transform: rotateY(180deg);
 }
 #Tras span{
