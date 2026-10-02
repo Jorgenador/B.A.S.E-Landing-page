@@ -21,7 +21,7 @@ header{
     justify-content: space-between;
     align-items: center;
     max-width: 90%;
-    margin: 10 auto;
+    margin: 10px auto;
     padding: 10px 20px;
 }
 .menuNav a{
@@ -108,14 +108,14 @@ em{
     text-align: center;
 }
 .Solucoes h3{
-    font-size: 16;
+    font-size: 16px;
     margin-top: 10%;
     margin-left: 20%;
     font-weight: 700;
 }
 .Solucoes p{
     margin: 6%;
-    font-size: 13.5;
+    font-size: 13.5px;
     line-height: 1.5;
 }
 .Qm{
