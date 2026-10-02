@@ -230,3 +230,26 @@ h2.Qm + p.Qm{
 #recursos p {
     color: gray;
 }
+
+/* ----------------------------- Footer ----------------------------- */
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: rgb(250, 250, 250);
+    margin-top: auto;
+}
+
+footer div{
+    text-align: center;
+}
+
+.span1{
+    font-weight: bold;
+}
+
+.span2 {
+}
+
+.span3 {
+}
