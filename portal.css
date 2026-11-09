@@ -1,0 +1,54 @@
+* {
+    background-color:rgb(212, 212, 212);
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: whitesmoke;
+    position: sticky;
+    top: 0%;
+    z-index: 1000;
+    backdrop-filter: blur(6px);
+}
+
+main {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    margin: 0px;
+    padding: 0px;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 20px;
+    margin-top: 2%;
+}
+
+.span1 { text-align: left; font-weight: bold; }
+.span2 { text-align: center; }
+.span3 { text-align: right; }
+
+#menu {
+    background-color: brown;
+}
+
+#topo {
+    background-color: cadetblue;
+}
+
+#principal {
+    background-color: blueviolet;
+}
