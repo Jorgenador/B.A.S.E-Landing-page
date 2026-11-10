@@ -1,4 +1,5 @@
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -13,6 +14,7 @@ body {
     display: flex;
     flex-direction: column;
     background-color:rgb(230, 230, 230);
+    font-family: Inter, Arial, sans-serif; font-size: 14px;
 }
 
 /* ------------------------------------ aside ------------------------------------ */
@@ -285,7 +287,12 @@ header {
 main {
     flex: 1;
     display: grid;
+    margin: 0px;
     margin-left: 250px;
+    grid-template-columns: 300px minmax(0, 1fr);
+    padding: 0px;
+    min-width: 0;
+    width: 100%;
 }
 
 /* -------------------------------------------------------------------------------- */
@@ -312,4 +319,200 @@ footer {
 
 .principal {
     background-color: blueviolet;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(320px, auto));
+    gap: 22px;
+    width: auto;
+    min-width: 0;
+    margin: 28px 28px 10px;
+}
+
+.painel { 
+    background-color: white; 
+    border: 1px solid #e8ebf1; 
+    border-radius: 13px; 
+    padding: 19px 20px; 
+    box-shadow: 0 2px 5px #18233a05; 
+    min-width: 0;
+    max-width: 100%;
+    min-height: 320px;
+    overflow: hidden;
+}
+
+.principal {
+    min-width: 0;
+}
+
+.painel-head { 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    gap: 10px; 
+    margin-bottom: 16px; 
+    min-width: 0;
+}
+
+.painel-head h2 { 
+    font-size: 16px; 
+    font-weight: 600; 
+    margin: 0; 
+}
+
+.painel-head select { 
+    height: 36px; 
+    border: 1px solid;
+    color: #e8ebf1;
+    border-radius: 7px; 
+    padding: 0 11px; 
+    color: #344057; 
+    background-color: white;
+    font-size: 11px; 
+}
+.painel-head a { 
+    color: #126be3; 
+    text-decoration: none; 
+    font-size: 12px;
+}
+
+.N-Vertical {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+    align-items: flex-end; 
+    color: #68758b; 
+    font-size: 10px;
+    padding: 0 0 0;
+}
+
+.L-Horizontal {
+    grid-column: 2; 
+    display: flex; 
+    justify-content: space-around; 
+    color: #536078; 
+    font-size: 11px; 
+    padding-top: 5px;
+}
+
+.painel-legenda { 
+    display: flex; 
+    gap: 24px; 
+    margin: 8px 0 20px; 
+    font-size: 12px; 
+    flex-wrap: wrap;
+    min-width: 0;
+}
+
+.painel-legenda span { 
+    display: flex; 
+    align-items: center; 
+    gap: 8px; 
+    min-width: 0;
+}
+
+.icone { 
+    width: 8px; 
+    height: 8px; 
+    border-radius: 50%; 
+    display: inline-block; 
+}
+
+.presença { 
+    background: #19b66b; 
+} 
+
+.falta { 
+    background: #ef444d; 
+} 
+
+.justificado { 
+    background: #1672ee; 
+}
+
+.painel-dados { 
+    height: 210px; 
+    display: grid; 
+    grid-template-columns: 28px 1fr; 
+    grid-template-rows: 190px 20px; 
+    column-gap: 8px; 
+}
+
+.painel-dados svg { 
+    width: 100%; 
+    height: 190px; 
+    overflow: hidden; 
+}
+
+.grid-lines path { 
+    stroke: #e9edf3; 
+    stroke-width: 1; 
+    fill: none; 
+}
+
+.bars { 
+    border-bottom: 1px solid #e8edf3; 
+    height: 200px; 
+    display: flex; 
+    justify-content: space-around; 
+    align-items: flex-end; 
+    gap: 12px; 
+    padding: 0 6px; 
+    overflow: hidden; 
+    background: repeating-linear-gradient(to bottom, #e9edf3 0, #e9edf3 1px, transparent 1px, transparent 25%); 
+}
+.bar-item { 
+    height: 22%; 
+    flex: 1 1 0; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: flex-end; 
+    align-items: center; 
+    min-width: 0; 
+    max-width: 60px; 
+}
+
+.bar { 
+    width: 100%; 
+    max-width: 46px; 
+    border-radius: 6px 6px 3px 3px; 
+    margin-bottom: 10px; 
+}
+.bar.blue { 
+    background: #1672ee; 
+} 
+.bar.green { 
+    background: #36c47d;
+ } 
+.bar.orange { 
+    background: #f49a08; 
+} 
+.bar.purple { 
+    background: #8750e9; 
+} 
+.bar.teal { 
+    background: #0bb4bd; 
+} 
+.bar.pink { 
+    background: #ed67a4; 
+}
+.bar-item span { 
+    font-size: 10px; 
+    color: #536078; 
+    white-space: nowrap; 
+}
+.bar-item b { 
+    font-size: 12px; 
+    margin-top: 7px; 
+}
+
+article {
+    display: flex;
+    justify-content: center;
+    font-size: 22px;
+    opacity: 50%;
+    
+    
 }
