@@ -7,22 +7,102 @@
     <link rel="stylesheet" href="portal.css">
 </head>
 <body>
+    <input type="checkbox" id="menu_control">
+
+    <aside>
+        <div>
+            <nav>
+                <div>
+                <img class="menu_logo" src="Img/Logo.png" alt="Logotipo BASE">
+                <img class="menu_logo2" src="Img/logo_reduzido.png" alt="Logotipo BASE">
+                </div>
+                <a href="#">
+                    <img src="Img/icones/dashboard.png" alt="">
+                    <span>Dashboard</span>
+                </a>
+                <a href="#">
+                    <img src="Img/icones/turmas.png" alt="">
+                    <span>Turmas</span></a>
+                <a href="#">
+                    <img src="Img/icones/professores.png" alt="">
+                    <span>Professores</span>
+                </a>
+                <a href="#">
+                    <img src="Img/icones/alunos.png" alt="">
+                    <span>Alunos</span>
+                </a>
+                <a href="#">
+                    <img src="Img/icones/frequencias.png" alt="">
+                    <span>Frequência</span>
+                </a>
+                <a href="#">
+                    <img src="Img/icones/avaliacoes.png" alt="">
+                    <span>Avaliações</span>
+                </a>
+                <a href="#">
+                    <img src="Img/icones/conteudos.png" alt="">
+                    <span>Conteúdos</span>
+                </a>
+                <a href="#">
+                    <img src="Img/icones/comunicados.png" alt="">
+                    <span>Comunicados</span>
+                </a>
+                <a href="#">
+                    <img src="Img/icones/relatorios.png" alt="">
+                    <span>Relatórios</span>
+                </a>
+                <a href="#">
+                    <img src="Img/icones/indicadores.png" alt="">
+                    <span>Indicadores</span>
+                </a>
+                <a class="config" href="#">
+                    <img src="Img/icones/configuracoes.png" alt="">
+                    <span>Configurações</span>
+                </a>
+            </nav>
+        </div>
+
+        <div class="usuario">
+            <div>
+                <img src="Img/icones/icone_avatar.png" alt="Avatar do login">
+                <a href="login.html"> Sair </a>
+            </div>
+
+            <div>
+                <p class="usuario_titulo">Diretor Escolar</p>
+                <p class="usuario_escola">Escola Municipal Saquarema</p>
+            </div>
+        </div>
+
+    </aside>
+
     <header>
-        Dashboard
+        <div id="header_esq">
+            <label  for="menu_control">
+                <div id="traco"></div>
+                <div id="traco"></div>
+                <div id="traco"></div>
+            </label>
+            <div id="header_titulos">
+                <p id="header_titulo">Dashboard</p>
+                <p id="header_subtitulo">Visão geral da escola</p>
+            </div>
+        </div>
+
+        <div id="header_dir">
+            <img src="Img/icones/icone_notificacao.png" alt="">
+            <div class="noti_num">3</div>
+
+        </div>
     </header>
     
     <main>
-
-        <aside id="menu" class="principal">
-            Menu
-        </aside>
-
-        <section class="principal">
-            <section id="topo">
+        <section>
+            <section class="topo">
                 topo
             </section>
 
-            <section id="principal">
+            <section class="principal">
                 principal
             </section>
         </section>
