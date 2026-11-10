@@ -1,0 +1,116 @@
+*{
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 14px;
+    box-sizing: border-box  ;
+}
+body{
+    background-color: whitesmoke;
+}
+html,body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+body{
+    display: flex;
+    flex-direction: column;
+}
+main{
+    flex: 1;
+}
+header{
+    background-color: rgb(231, 231, 252);
+    z-index: 1000;
+}
+footer{
+    background-color: rgb(231, 231, 252);
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 20px;
+    justify-content: space-evenly;
+}
+#headerDiv{
+    display: grid;
+    justify-content: center;
+    
+}
+#headerDiv img{
+    width: 75px;
+    margin: 10px 20px 10px;
+}
+.span1{
+    text-align: left;
+    font-width: bold;
+}
+.span2{
+    text-align: center;
+}
+.span3{
+    text-align: right;
+}
+#inputs{
+    display: flex;
+    justify-content: center; 
+    margin-top: 150px;
+    background-color: rgb(56, 56, 189);
+    height: 400px;
+    align-items: center;
+}
+#form{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 300px;
+} 
+#form input{
+    outline: none;
+    border: goldenrod solid 2px;
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+    border-radius: 2px;
+    height: 30px;
+    background-color: whitesmoke;
+}
+#form input:focus{  
+    outline: none;
+    border-width: 2px;
+    border-color: goldenrod;
+    box-shadow: 0 0 0 2px goldenrod;
+}
+
+#inputs button{
+    border: none;
+    border: 1px solid black;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 150px;
+    height: 40px;
+    align-self: center;
+    font-weight: bold;
+    background-color: goldenrod;
+    transition-property: all;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in;
+    color: whitesmoke;
+}
+#inputs button:hover{
+    color: black;
+    box-shadow: 0 4px 3px black;
+    transform: scale(1.1);
+
+}
+#inputs p{
+    text-align: center;
+    font-weight: bold;
+    margin-top: 15px;
+    font-size: 16px;
+    transition: color 0.1s ease;
+    visibility: hidden;
+}
+#inputs label{
+    color: goldenrod;
+    font-weight: bold;
+    font-size: 24px;
+}
