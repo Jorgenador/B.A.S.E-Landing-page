@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <header>
+        <div id="headerDiv">
+            <img src="Img/Logo.png" alt="Logo sem fundo do projeto base">
+        </div>
+    </header>
+    <main>
+        <section>
+            <div id="inputs">
+                <form id="form">
+                    <label for="Matricula">Matricula</label>
+                    <input type="text" id="matricula" name="Matricula" placeholder="Digite sua matricula">
+
+                    <label for="Senha">Senha</label>
+                    <input type="password" id="senha" name="Senha" placeholder="Digite sua senha">
+                    <p id="msg">&nbsp;</p>
+                    <button type="submit">ENTRAR</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    <div class="span1">B.A.S.E.</div>
+    <div class="span2">Base de Acompanhamento do Sistema Escolar</div>
+    <div class="span3">®2026 - Projeto acadêmico</div>
+
+    </footer>
+    <script>
+        const matriculaLogin = "202613123";
+        const senhaLogin = "123456";
+        const form = document.querySelector('form');
+        
+        form.addEventListener("submit",function(event){
+            event.preventDefault();
+            const inputMatricula = document.querySelector('#matricula').value;
+            const inputSenha = document.querySelector('#senha').value;
+            const texto = document.querySelector("#msg");
+
+            if (matriculaLogin == inputMatricula && senhaLogin == inputSenha){
+                texto.style.color = "green";
+                texto.textContent = "Login realizado com sucesso!";
+                texto.style.visibility = "visible";
+
+                setTimeout(function(){
+                    window.location.href = "portal.html"
+                }, 1500);
+            }else{
+                texto.style.color = "rgb(212, 22, 22)";
+                texto.textContent = "Login invalido, tente novamente."
+                texto.style.visibility = "visible";
+            }
+        })
+
+
+    </script>
+</body>
+</html>
