@@ -163,7 +163,7 @@
                         <img src="Img/seta_frequencia.png" alt="">
                     </div>
                 </div>
-                
+
             </section>
             <section class="container">
                 <section class="painel">
@@ -173,6 +173,10 @@
                         <div class="N-Vertical"><span>600</span><span>500</span><span>400</span><span>300</span><span>200</span><span>100</span><span>0</span></div>
                             <svg viewBox="0 0 600 190" preserveAspectRatio="none" role="img" aria-label="Gráfico de frequência">
                                 <g class="grid-lines"><path d="M0 10H600 M0 40H600 M0 70H600 M0 100H600 M0 130H600 M0 160H600 M0 190H600"/></g>
+                                <polyline id="linha-presencas" fill="none" stroke="#10b981" stroke-width="4" points="" />
+                                <polyline id="linha-faltas" fill="none" stroke="#ef4444" stroke-width="4" points="" />
+                                <polyline id="linha-justificadas" fill="none" stroke="#3b82f6" stroke-width="4" points="" />
+
                             </svg>
                         <div class="L-Horizontal"><span>Jan</span><span>Fev</span><span>Mar</span><span>Abr</span><span>Mai</span><span>Jun</span></div>
                     </div>
@@ -184,18 +188,28 @@
                 </section>
 
                 <section class="painel">
-                <div class="painel-head"><h2>Desempenho por Disciplina</h2><select aria-label="Bimestre"><option>2º Bimestre</option><option>1º Bimestre</option></select></div>
-                <div class="painel-dados">
-                    <div class="N-Vertical"><span>100</span><span>75</span><span>50</span><span>25</span><span>0</span></div>
-                    <div class="bars">
-                    <div class="bar-item"><div class="bar blue" style="height:85%"></div><span>Português</span><b>0%</b></div>
-                    <div class="bar-item"><div class="bar green" style="height:78%"></div><span>Matemática</span><b>0%</b></div>
-                    <div class="bar-item"><div class="bar orange" style="height:82%"></div><span>Ciências</span><b>0%</b></div>
-                    <div class="bar-item"><div class="bar purple" style="height:75%"></div><span>História</span><b>0%</b></div>
-                    <div class="bar-item"><div class="bar teal" style="height:80%"></div><span>Geografia</span><b>0%</b></div>
-                    <div class="bar-item"><div class="bar pink" style="height:90%"></div><span>Inglês</span><b>0%</b></div>
+                    <div class="painel-head"><h2>Desempenho por Disciplina</h2><select aria-label="Bimestre"><option>2º Bimestre</option><option>1º Bimestre</option></select></div>
+                    <div class="painel-dados dados-barras">
+                        <div class="N-Vertical"><span>100</span><span>75</span><span>50</span><span>25</span><span>0</span></div>
+
+                        <div class="bars">
+                            <div class="bar-item"><div class="bar blue" style="height:85%"></div></div>
+                            <div class="bar-item"><div class="bar green" style="height:78%"></div></div>
+                            <div class="bar-item"><div class="bar orange" style="height:82%"></div></div>
+                            <div class="bar-item"><div class="bar purple" style="height:75%"></div></div>
+                            <div class="bar-item"><div class="bar teal" style="height:80%"></div></div>
+                            <div class="bar-item"><div class="bar pink" style="height:90%"></div></div>
+                        </div>
+
+                        <div class="L-Horizontal bars-labels">
+                            <div><span >Português</span><b id="textoblue">0%</b></div>
+                            <div><span >Matemática</span><b id="textogreen">0%</b></div>
+                            <div><span >Ciências</span><b id="textoorange">0%</b></div>
+                            <div><span >História</span><b id="textopurple">0%</b></div>
+                            <div><span >Geografia</span><b id="textoteal">0%</b></div>
+                            <div><span >Inglês</span><b id="textopink">0%</b></div>
+                        </div>
                     </div>
-                </div>
                 </section>
 
                 <section class="painel">
@@ -212,5 +226,50 @@
         <div class="span2">Base de Acompanhamento do Sistema Escolar</div>
         <div class="span3">®2026 - Projeto acadêmico</div>
     </footer>
+    <script>
+        const intervalo = (ms) => new Promise((resolve) => setTimeout(resolve,ms));
+        const barras = ["blue","green","orange","purple","teal","pink"]
+        const posicoesX = [0,50,150,250,350,450,550,600];
+
+        function GerarCordenados(min,max){
+            let listaPontos = [];
+            for(let i=0;i<posicoesX.length;i++){
+                let valor = Math.floor(Math.random()*(max-min+1)) +min;
+                let y = 190 - (valor/600)*190;
+                listaPontos.push(`${posicoesX[i]},${y}`);
+
+            }
+            return listaPontos.join(" ");
+        }
+
+        async function atualizarFrequencia() {
+            while(true){
+                document.querySelector("#linha-presencas").setAttribute("points",GerarCordenados(350,550));
+                document.querySelector("#linha-faltas").setAttribute("points",GerarCordenados(10,120));
+                document.querySelector("#linha-justificadas").setAttribute("points",GerarCordenados(5,80));
+            
+                await intervalo(30000);
+            }
+        }
+
+        async function GerarGrafico() {
+            while (true){
+                let min = 50;
+                let max = 100;
+                for (const cor of barras) {
+                    let valor = Math.floor(Math.random()*(max-min+1)) + min;
+                    let barra = document.querySelector("."+cor)
+                    barra.style.height = valor+"%"
+                    let texto = document.querySelector("#texto"+cor)
+                    texto.textContent = valor+"%"
+                }
+                await intervalo(30000)
+            }
+        }
+
+
+        atualizarFrequencia()
+        GerarGrafico()
+    </script>
 </body>
 </html>

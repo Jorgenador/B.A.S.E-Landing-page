@@ -232,7 +232,8 @@ header {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 20px;
-    padding: 20px;
+    padding: 28px;
+    padding-bottom: 0;
 }
 
 .blocos {
@@ -267,8 +268,8 @@ header {
 }
 
 .seta {
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     margin-left: auto;
     align-self: center;
     background-color: white;
@@ -360,8 +361,7 @@ main {
     display: flex;
     
     flex: 1;
-    margin: 0px;
-    margin-left: 250px;
+    margin: 0px 0px 0px 250px;
     padding: 0px;
     min-width: 0;
 }
@@ -434,6 +434,7 @@ footer {
     background-color: white;
     font-size: 11px; 
 }
+
 .painel-head a { 
     color: #126be3; 
     text-decoration: none; 
@@ -502,6 +503,12 @@ footer {
     column-gap: 8px; 
 }
 
+/* NOVO: só o painel de barras precisa de mais espaço embaixo (nome + %) */
+.dados-barras {
+    height: auto;
+    grid-template-rows: 190px auto;
+}
+
 .painel-dados svg { 
     width: 100%; 
     height: 190px; 
@@ -516,7 +523,8 @@ footer {
 
 .bars { 
     border-bottom: 1px solid #e8edf3; 
-    height: 200px; 
+    border-top: 1px solid #e9edf3;      /* NOVO: linha do topo (100%) */
+    height: 190px;                      /* MUDOU: era 200px */
     display: flex; 
     justify-content: space-around; 
     align-items: flex-end; 
@@ -525,13 +533,13 @@ footer {
     overflow: hidden; 
     background: repeating-linear-gradient(to bottom, #e9edf3 0, #e9edf3 1px, transparent 1px, transparent 25%); 
 }
+
 .bar-item { 
-    height: 22%; 
+    height: 100%; 
     flex: 1 1 0; 
     display: flex; 
-    flex-direction: column; 
-    justify-content: flex-end; 
-    align-items: center; 
+    justify-content: center;            /* MUDOU: sem flex-direction: column */
+    align-items: flex-end;              /* MUDOU: barra cresce a partir da base */
     min-width: 0; 
     max-width: 60px; 
 }
@@ -540,34 +548,61 @@ footer {
     width: 100%; 
     max-width: 46px; 
     border-radius: 6px 6px 3px 3px; 
-    margin-bottom: 10px; 
+    margin-bottom: 0;                   /* MUDOU: era 10px */
 }
+
 .bar.blue { 
     background: #1672ee; 
 } 
+
 .bar.green { 
     background: #36c47d;
- } 
+} 
+
 .bar.orange { 
     background: #f49a08; 
 } 
+
 .bar.purple { 
     background: #8750e9; 
 } 
+
 .bar.teal { 
     background: #0bb4bd; 
 } 
+
 .bar.pink { 
     background: #ed67a4; 
 }
-.bar-item span { 
+
+/* NOVO: rótulos (nome + %) abaixo das barras, substituem .bar-item span / b */
+.bars-labels {
+    gap: 12px;
+    padding: 0 6px;                     /* mesmo padding de .bars */
+}
+
+.bars-labels > div {
+    flex: 1 1 0;
+    max-width: 60px;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bars-labels span { 
     font-size: 10px; 
     color: #536078; 
     white-space: nowrap; 
 }
-.bar-item b { 
+
+.bars-labels b { 
     font-size: 12px; 
-    margin-top: 7px; 
+    margin-top: 4px; 
+}
+
+.bar{
+    transition: height 0.9s ease-in-out;
 }
 
 article {
@@ -575,6 +610,4 @@ article {
     justify-content: center;
     font-size: 22px;
     opacity: 50%;
-    
-    
 }
