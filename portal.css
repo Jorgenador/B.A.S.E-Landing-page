@@ -19,11 +19,47 @@ body {
 
 /* ------------------------------------ aside ------------------------------------ */
 
+#menu_control:checked ~ aside {
+    width: 100px;
+}
+
+#menu_control:checked ~ header,
+#menu_control:checked ~ main,
+#menu_control:checked ~ footer {
+    margin-left: 100px;
+}
+/* Esconde o texto */
+#menu_control:checked ~ aside nav a span{
+    display: none;
+}
+/* centraliza os icones */
+#menu_control:checked ~ aside nav a{
+    justify-content: center;
+    width: 70px;
+}
+#menu_control:checked ~ aside .usuario{
+    height: 10%;
+    scale: 0.85;
+}
+#menu_control:checked ~ aside .usuario p{
+    display: none;
+}
+#menu_control:checked ~ aside .menu_logo{
+    display: none;
+}
+#menu_control:checked ~ aside .menu_logo2{
+    display:flex;
+}
+#menu_control:checked ~ aside .usuario a{
+    width: 60px;
+}
+
 aside {
-    overflow: auto;
     position: fixed;
     top: 0;
     left: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
 
     width: 250px;
     height: 100vh;
@@ -40,69 +76,39 @@ aside {
     background-color: rgb(235, 235, 235);
 
     transition: width 0.3s ease;
-}
-
-#menu_control:checked ~ aside {
-    width: 100px;
-}
-
-#menu_control:checked ~ header,
-#menu_control:checked ~ main,
-#menu_control:checked ~ footer {
-    margin-left: 100px;
-}
-/* Esconde o texto */
-#menu_control:checked ~ aside nav a span{
-    display: none;
-
-}
-/* centraliza os icones */
-#menu_control:checked ~ aside nav a{
-    justify-content: center;
-    /* padding: 12px 0; */
-    width: 70%;
-}
-
-#menu_control:checked ~ aside .usuario{
-    height: 10%;
-    scale: 0.9;
-}
-
-#menu_control:checked ~ aside .usuario p{
-    display: none;
-}
-
-#menu_control:checked ~ aside .menu_logo{
-    display: none;
-}
-
-#menu_control:checked ~ aside .menu_logo2{
-    display:flex;
-
-}
-
-#menu_control:checked ~ aside .usuario a{
-    width: 60px;
+    overflow: auto;
 }
 
 aside nav{
     display:flex;
     flex-direction: column;
-    gap: 10px;
     align-items: center;
+    gap: 5px;
+    width: auto;
+}
+
+
+.menu_logo, .menu_logo2 {
+    display: flex;
+    justify-self: center;
+    width: 50%;
+    height: auto;
+    padding-top: 5%;
+}
+
+.menu_logo2{
+    display: none;
 }
 
 aside nav a{
     display: flex;
     align-items: center;
-    gap: 15px;
-    padding: 15px 20px;
 
-    min-height: 40px;
+    gap: 10px;
+    padding: 10%;
+
     height: 40px;
-    width: 230px;
-
-    overflow: hidden;
+    width: 200px;
 
     box-sizing: border-box;
     border-radius: 10px;
@@ -112,44 +118,29 @@ aside nav a{
 
 }
 
-/* icones */
-aside nav a img{
-    width: 45px;
-    height: auto;
-    filter: drop-shadow(0px 0px 0.5px orange);
-}
-
-
 aside nav a:hover   {
     background-color: rgb(45, 126, 218);
-    scale: 1.05;
+    scale: 1.1;
     img{
         filter: brightness(0) saturate(100%) invert(55%) sepia(95%) saturate(1500%) hue-rotate(355deg) brightness(100%) drop-shadow(0px 0px 2px rgb(0, 0, 0));
-        scale: 1.15;
+        /* scale: 1.15; */
         
     }
 }
 
+/* icones */
+aside nav a img{
+    width: auto;
 
-aside nav div{
-    min-height: 200px;
-    align-content: center;
-}
-.menu_logo, .menu_logo2 {
-    display: flex;
-    justify-self: center;
-    width: 50%;
+    min-height: 25px;
     height: auto;
-    padding-top: 5%;
-    
-}
+    max-height: 35px;
 
-.menu_logo2{
-    display: none;
+    filter: drop-shadow(0px 0px 0.5px orange);
 }
 
 .config {
-    margin-top: 20%;
+    margin-top: 10%;
     border-top: 3px solid rgb(190 190 190 / 1);
 }
 
@@ -159,17 +150,18 @@ aside nav div{
     width: 95%;
     height: 200px;
     border: 1px solid rgb(190 190 190 / 0.5);
-    margin-bottom: 10px;
     align-items: center;
     justify-content: space-evenly;
     background-color: rgb(228, 228, 228);
     border-radius: 5px;
     text-align: center;
+    
 
     div {
         display: flex;
         flex-direction: column;
         align-items: center;
+        overflow:hidden;
     }
     
     a {
@@ -190,7 +182,8 @@ aside nav div{
 }
 
 .usuario img{
-    width: 110px;
+    width: 100%;
+    max-width: 100px;
 }
 
 .usuario_titulo{
@@ -364,11 +357,13 @@ header {
 /* ------------------------------------ Main ------------------------------------ */
 
 main {
+    position: relative;
+    display: flex;
+    
     flex: 1;
     margin: 0px 0px 0px 250px;
     padding: 0px;
     min-width: 0;
-    box-sizing: border-box;
 }
 
 /* -------------------------------------------------------------------------------- */
